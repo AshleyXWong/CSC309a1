@@ -1,0 +1,112 @@
+body {
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+main {
+    float: left;
+    padding: 1em;
+    width: 100% !important;
+}
+
+
+header {
+    clear: left;
+    text-align: center;
+    margin:5px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+footer {
+    clear: left;
+    text-align: center;
+    margin:5px;
+}
+
+nav ul a {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+    background: black;
+    color: white;
+    font-family: serif;
+    font-size: 24px;
+    display:flex;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    margin:0;
+    padding: 0;
+
+}
+
+nav li {
+    flex: 1; 
+    padding-left: 10px;
+    padding-right: 10px;
+    display:flex;
+    align-items: stretch;
+}
+
+.frogs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.frogs li {
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+}
+
+
+@media all and (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(20, 5%);;
+    }
+    .stats { 
+        grid-column: 18/19;
+        border: 1px solid black;
+        width: 200px;
+        height: 200x;
+        padding: 1px 5px;
+        float:right;
+    }
+    section {
+        grid-column: 1/15;
+    }
+
+    .stats > h1 {
+        text-align: center;
+    }
+
+}
+
+@media all and (max-width: 1000px) { 
+    nav ul { flex-wrap: wrap; }
+    nav li { flex: 0 0 100%; } 
+}
+
+@media all and (max-width: 480px) { 
+    nav li { 
+        flex-basis: 100%; 
+        width: 100%;
+    } 
+
+    .frogs {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
